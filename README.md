@@ -1,20 +1,25 @@
-# 📘 나만의 모의고사 (Mock Exam App)
+# 📘 나만의 모의고사 생성 웹 서비스(Mock Exam App)
 
-"나만의 모의고사"는 사용자가 직접 시험 문제를 생성하고 응시하며, 오답을 복습할 수 있는 웹 기반 모의고사 플랫폼입니다.  
-React + Firebase + Node.js + MongoDB를 활용하여 풀스택 환경으로 구축되었습니다.
+- 📝 사용자는 **직접 문제와 정답을 입력**하여 **나만의 모의고사**를 만들 수 있습니다.
+
+- 🧪 생성한 문제들을 기반으로 **시험을 응시**하고, **자동 채점 결과를 실시간으로 확인**할 수 있습니다.
+
+- 🔁 틀린 문제들만 자동으로 모아 **오답 모의고사**를 다시 풀 수 있는 기능도 지원합니다.
+
+- 📊 이전에 저장한 **문제와 시험 결과는 기록**으로 남아, **개인화된 복습 시험**으로 언제든지 다시 응시할 수 있습니다.
 
 ---
 
-## 🔍 주요 기능
+## 🔍 주요 기능과 화면
 - 🏠 **홈 화면**
 <img width="700" alt="로그인이된홈화면" src="https://github.com/user-attachments/assets/7923d82f-dff3-41c2-b661-adbd8f68e944" />
 <br><br>
 
-- 🔐 **Firebase 로그인** (Google 계정 인증)
+- 🔐 **Google 로그인**
 <img width="700" alt="로그인화면" src="https://github.com/user-attachments/assets/00b51060-c0c6-4b55-98dc-df49710d96e4" />
 <br><br>
 
-- 📝 **시험 문제 생성** (제목, 문제, 정답 입력)
+- 📝 **시험 문제 생성** 
 <img width="700" alt="시험만들기화면" src="https://github.com/user-attachments/assets/f289b1ad-d3a9-4e33-860d-873123d45613" />
 <img width="700" alt="시험이 생성된 내 시험 목록" src="https://github.com/user-attachments/assets/2901b419-2baa-4246-9263-7b2b8da66d89" />
 <br><br>
@@ -28,7 +33,7 @@ React + Firebase + Node.js + MongoDB를 활용하여 풀스택 환경으로 구�
 <img width="700" alt="문제가 정렬된 화면" src="https://github.com/user-attachments/assets/9af0f9a2-439f-45d7-adf0-a0c8d4327ffa" />
 <br><br>
 
-- 📊 **내 시험 및 결과 목록 확인**
+- 📊 **시험 결과 및 이전 결과 목록 확인**
 <img width="700" alt="시험결과화면" src="https://github.com/user-attachments/assets/973fec27-bda8-4d87-aef8-8fa7073b6ecd" />
 <img width="700" alt="내 시험결과 목록" src="https://github.com/user-attachments/assets/c75d1653-0266-471f-a6fa-e0761b325186" />
 <br><br>
