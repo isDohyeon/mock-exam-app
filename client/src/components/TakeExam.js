@@ -4,6 +4,14 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { examApi } from '../services/api';
 
 const TakeExam = () => {
+  const shuffleArray = (array) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  };
   const { examId } = useParams();
   const navigate = useNavigate();
   const [exam, setExam] = useState(null);
@@ -41,7 +49,7 @@ const TakeExam = () => {
   const toggleRandomize = () => {
     if (!isRandomized) {
       // 질문 섞기
-      const shuffledQuestions = [...exam.questions].sort(() => Math.random() - 0.5);
+      const shuffledQuestions = shuffleArray(exam.questions);
       setQuestions(shuffledQuestions);
       // 답변 초기화
       setAnswers(new Array(shuffledQuestions.length).fill(''));
