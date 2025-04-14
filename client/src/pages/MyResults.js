@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { examApi } from '../services/api';
 
 const MyResults = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const navigate = useNavigate();
   const [refreshTrigger, setRefreshTrigger] = useState(0); // 새로고침 트리거 추가
 
   useEffect(() => {
@@ -158,7 +157,7 @@ const MyResults = () => {
                   <td className="px-6 py-4">
                     {new Date(result.date).toLocaleDateString()} {new Date(result.date).toLocaleTimeString()}
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="px-6 py-4 text-center whitespace-nowrap">
                     <Link
                       to={`/result/${result._id}`}
                       className="px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600"
@@ -166,7 +165,7 @@ const MyResults = () => {
                       결과 보기
                     </Link>
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="px-6 py-4 text-center whitespace-nowrap">
                     <button
                       id={`incorrect-btn-${result._id}`}
                       onClick={() => handleRetakeIncorrect(result._id)}
@@ -180,7 +179,7 @@ const MyResults = () => {
                       {result.score === result.totalQuestions ? '모두 정답' : '오답 모의고사'}
                     </button>
                   </td>
-                  <td className="px-6 py-4 text-center">
+                  <td className="px-6 py-4 text-center whitespace-nowrap">
                     <button
                       id={`delete-btn-${result._id}`}
                       onClick={() => handleDeleteResult(result._id)}
